@@ -1,3 +1,5 @@
+
+
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -48,4 +50,10 @@ function loadMemberContent() {
     .catch(error => {
         console.error('멤버 컨텐츠 로드 중 에러 발생:', error);
     });
+}
+
+function showMemberContent() {
+    // AJAX 요청을 통해 백엔드에서 멤버 전용 콘텐츠 가져오기
+    // 예시: fetch('/api/member-content', {...})
+    // 성공 시, 멤버 전용 콘텐츠를 'memberContent' div에 표시
 }
