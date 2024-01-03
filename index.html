@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>멤버 전용 페이지</title>
+    <title>메인 페이지</title>
 </head>
 <body>
-    <h2>로그인</h2>
-    <form id="loginForm">
-        <label for="username">사용자명:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">비밀번호:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">로그인</button>
-    </form>
+    <h1>메인 페이지</h1>
+    <nav>
+        <a href="public-page.html">공개 페이지</a>
+        <a href="#" onclick="showMemberContent()">멤버 전용 페이지</a>
+    </nav>
 
+    <!-- 로그인 폼 -->
+    <div id="loginForm">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- 멤버 전용 콘텐츠 (초기에 숨겨져 있음) -->
     <div id="memberContent" style="display:none;">
-        <h3>멤버 전용 컨텐츠</h3>
-        <!-- 멤버 전용 컨텐츠가 여기에 로드됩니다 -->
+        <h2>멤버 전용 콘텐츠</h2>
+        <!-- 멤버 전용 콘텐츠가 여기에 로드됩니다 -->
     </div>
 
     <script src="script.js"></script>
