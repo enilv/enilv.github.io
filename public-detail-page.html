@@ -2,10 +2,36 @@
 <html>
 <head>
     <title>공개 페이지</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+    
 <body>
     <h1>공개 페이지</h1>
     <p>여기에는 모든 사용자가 볼 수 있는 내용이 포함됩니다.</p>
     <a href="index.html">메인 페이지로 돌아가기</a>
+
+
+    <!-- 권한 테스트 -->
+    <h1>Hello from Local HTML</h1>
+    <input type="file" accept="image/*" capture="camera">
+    <input type="file" accept="video/*" capture="camcorder">
+    <input type="file" accept="audio/*" capture="microphone">
+    <input type="file" accept="image/*">
+
+    
+    <h1>Camera and Microphone Test JS</h1>
+    <video id="videoElement" autoplay></video>
+
+    <script>
+        const video = document.getElementById('videoElement');
+
+        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+            .then((stream) => {
+                video.srcObject = stream;
+            })
+            .catch((err) => {
+                console.error("Error accessing the camera and microphone", err);
+            });
+    </script>
 </body>
 </html>
