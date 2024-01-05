@@ -1,5 +1,5 @@
 #videoElement {
-    width: 640px;
-    height: 480px;
+    width: 100px;
+    height: 100px;
     border: 1px solid black;
 }
